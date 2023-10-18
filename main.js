@@ -5,7 +5,7 @@ const colors = [
   "crimson",
   "blue",
   "dodgerblue",
-  "gold",
+  "brown",
   "green",
   "orange",
 ];
