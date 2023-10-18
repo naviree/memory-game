@@ -1,3 +1,4 @@
+const resetContent = document.querySelector(".tiles");
 const tilesContainer = document.querySelector(".tiles");
 const colors = [
   "#DB93B0",
@@ -68,6 +69,30 @@ function buildTile(color) {
   return element;
 }
 
+function resetTiles() {
+  // Clear the tilesContainer
+  tilesContainer.innerHTML = '';
+
+  // Reset game state
+  revealedCount = 0;
+  activeTile = null;
+  awaitingEndOfMove = false;
+
+  // Restore the original colors pick list
+  const resetColorsPickList = [...colors, ...colors];
+
+  // Rebuild tiles
+  for (let i = 0; i < tileCount; i++) {
+    const randomIndex = Math.floor(Math.random() * resetColorsPickList.length);
+    const color = resetColorsPickList[randomIndex];
+    const tile = buildTile(color);
+
+    resetColorsPickList.splice(randomIndex, 1);
+    tilesContainer.append(tile);
+  }
+}
+
+document.getElementById('resetButton').addEventListener('click', resetTiles);
 // Build up tiles
 
 for (let i = 0; i < tileCount; i++) {
