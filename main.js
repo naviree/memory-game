@@ -1,7 +1,7 @@
 const tilesContainer = document.querySelector(".tiles");
 const colors = [
-  "aqua",
-  "aquamarine",
+  "pink",
+  "purple",
   "crimson",
   "blue",
   "dodgerblue",
