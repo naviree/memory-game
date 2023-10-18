@@ -1,5 +1,5 @@
 const tilesContainer = document.querySelector(".tiles");
-const colors = ["aqua", "aquamarine", "crimson", "blue", "dodgerblue", "gold", "green","greenyellow", "teal"];
+const colors = ["aqua", "aquamarine", "crimson", "blue", "dodgerblue", "gold", "green","greenyellow"];
 const colorsPickList = [...colors, ...colors];
 const tileCount = colorsPickList.length;
 
@@ -11,6 +11,47 @@ function buildTile(color) {
     const element = document.createElement("div");
 
     element.classList.add("tile");
+    element.setAttribute("data-color", color);
+
+    element.addEventListener("click", () => {
+        if (awaitingEndOfMove) {
+            return;
+        }
+
+        element.style.backgroundColor = color;
+
+        if (!activeTile) {
+            activeTile = element;
+
+           return; 
+        }
+
+        const colorToMatch = activeTile.getAttribute("data-color");
+
+        if (colorToMatch === color) {
+            activeTile = null;
+            awaitingEndOfMove = false;
+            revealedCount += 2;
+
+            if (revealed === tileCount) {
+                alert("You win! Refresh to play again.")
+            }
+
+            return;
+        }
+
+        awaitingEndOfMove = true;
+        
+        setTimeout(() => {
+            element.style.backgroundColor = null;
+            activeTile.style.backgroundColor = null;
+
+            awaitingEndOfMove = false;
+            activeTile = null;
+        }, 1000); 
+    });
+
+    return element;
 }
 
 // Build up tiles
@@ -18,9 +59,8 @@ function buildTile(color) {
 for(let i = 0; i < tileCount; i++){
     const randomIndex = Math.floor(Math.random () * colorsPickList.length);
     const color = colorsPickList[randomIndex];
-
+    const tile = buildTile(color);
+    
     colorsPickList.splice(randomIndex, 1);
-
-
-    console.log(color)
+    tilesContainer.append(tile);
 }
