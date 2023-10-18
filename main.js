@@ -33,7 +33,7 @@ function buildTile(color) {
             awaitingEndOfMove = false;
             revealedCount += 2;
 
-            if (revealed === tileCount) {
+            if (revealedCount === tileCount) {
                 alert("You win! Refresh to play again.")
             }
 
