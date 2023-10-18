@@ -7,7 +7,7 @@ const colors = [
   "dodgerblue",
   "gold",
   "green",
-  "greenyellow",
+  "orange",
 ];
 const colorsPickList = [...colors, ...colors];
 const tileCount = colorsPickList.length;
