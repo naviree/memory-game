@@ -4,7 +4,9 @@ body {
 }
 
 .tiles {
-    margin: 48px auto;
+    margin: auto;
+    margin-top: 30vh;
+   
     width: max-content;
     display: grid;
     grid-template-columns: repeat(4, 100px);
