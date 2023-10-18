@@ -11,6 +11,9 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     gap: 16px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
 }
 
 .tile {
@@ -18,4 +21,7 @@ body {
     background: #111111;
     border: 5px solid #444444;
     cursor: pointer;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
 }

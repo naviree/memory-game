@@ -1,13 +1,13 @@
 const tilesContainer = document.querySelector(".tiles");
 const colors = [
-  "pink",
-  "purple",
-  "crimson",
-  "blue",
-  "dodgerblue",
-  "brown",
-  "green",
-  "orange",
+  "#DB93B0",
+  "#9E2B25",
+  "#F3FFBD",
+  "#87B6A7",
+  "#467599",
+  "#5B4B49",
+  "#C5C5C5",
+  "#F79F79",
 ];
 const colorsPickList = [...colors, ...colors];
 const tileCount = colorsPickList.length;
