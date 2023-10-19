@@ -5,7 +5,8 @@ body {
 
 .tiles {
     margin: auto;
-    margin-top: 30vh;
+    margin-top: 20vh;
+    padding-bottom: 20px;
     width: max-content;
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -24,7 +25,18 @@ body {
 
 @media screen and (max-width: 768px) {
     .tiles {
-        max-width: 600px;
+        grid-template-columns: repeat(2, 100px); /* Adjusts to 2 tiles per row */
+        margin-top: 10vh; /* Reduces margin-top */
+        width: auto; /* Makes the grid width automatic to fit content */
+        background-color: red; /* As you originally had */
+        padding: 10px; /* Adds a bit of padding around tiles */
     }
-
+    
+    /* Optional: You can add another breakpoint for very small screens */
+    @media screen and (max-width: 480px) {
+        .tiles {
+            grid-template-columns: repeat(1, 100px); /* Only 1 tile per row */
+            margin-top: 5vh; /* Further reduce margin-top */
+        }
+    }
 }
