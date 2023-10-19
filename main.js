@@ -1,5 +1,6 @@
 const resetContent = document.querySelector(".tiles");
 const tilesContainer = document.querySelector(".tiles");
+const score = document.getElementById('total-score');
 const colors = [
   "#DB93B0",
   "#9E2B25",
@@ -10,11 +11,14 @@ const colors = [
   "#C5C5C5",
   "#F79F79",
 ];
+
 const colorsPickList = [...colors, ...colors];
 const tileCount = colorsPickList.length;
 let revealedCount = 0;
 let activeTile = null;
 let awaitingEndOfMove = false;
+let incorrectMatches = 0;
+
 
 function buildTile(color) {
   const element = document.createElement("div");
@@ -48,11 +52,17 @@ function buildTile(color) {
       awaitingEndOfMove = false;
       revealedCount += 2;
 
-      // if (revealedCount === tileCount) {
-      //   alert("You win! Refresh to play again.");
-      // }
+       if (revealedCount === tileCount) {
+        //  resetTiles();
+       }
       return;
-    }
+    } 
+    incorrectMatches++;
+    console.log(incorrectMatches);
+    score.innerHTML = incorrectMatches;
+
+    
+
 
     awaitingEndOfMove = true;
 
@@ -64,18 +74,21 @@ function buildTile(color) {
       activeTile = null;
     }, 1000);
   });
-
+ 
   return element;
 }
 
 function resetTiles() {
   // Clear the tilesContainer
   tilesContainer.innerHTML = '';
-
+  score.innerHTML = 0;
+  incorrectMatches = 0;
+  
   // Reset game state
   revealedCount = 0;
   activeTile = null;
   awaitingEndOfMove = false;
+  
 
   // Restore the original colors pick list
   const resetColorsPickList = [...colors, ...colors];
