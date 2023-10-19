@@ -3,14 +3,9 @@ body {
     margin: 0;
 }
 
-:root {
-    --tile-size: 100px;
-    --gap-size: 16px;
-}
 
 .tiles {
-    margin: auto;
-    margin-top: 20vh;
+    margin: 20vh auto auto;
     padding-bottom: 20px;
     width: max-content;
     display: grid;
@@ -29,14 +24,18 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    :root {
-        --tile-size: 75px; /* Reduced size for mobile */
-        --gap-size: 12px; /* Reduced gap for mobile */
+    .tile {
+        height: 65px;
+        width: 65px;
     }
-}
-@media screen and (max-width: 480px) {
-    :root {
-        --tile-size: 50px; /* Even smaller size */
-        --gap-size: 8px; /* Even smaller gap */
+    .tiles {
+        grid-template-columns: repeat(4, 75px);
+        gap: 8px;
+        width: max-content;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
+
+
 }

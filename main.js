@@ -12,7 +12,6 @@ const colors = [
 ];
 const colorsPickList = [...colors, ...colors];
 const tileCount = colorsPickList.length;
-
 let revealedCount = 0;
 let activeTile = null;
 let awaitingEndOfMove = false;
