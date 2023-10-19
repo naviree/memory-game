@@ -34,3 +34,9 @@ body {
         --gap-size: 12px; /* Reduced gap for mobile */
     }
 }
+@media screen and (max-width: 480px) {
+    :root {
+        --tile-size: 50px; /* Even smaller size */
+        --gap-size: 8px; /* Even smaller gap */
+    }
+}
