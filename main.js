@@ -48,9 +48,9 @@ function buildTile(color) {
       awaitingEndOfMove = false;
       revealedCount += 2;
 
-      if (revealedCount === tileCount) {
-        alert("You win! Refresh to play again.");
-      }
+      // if (revealedCount === tileCount) {
+      //   alert("You win! Refresh to play again.");
+      // }
       return;
     }
 
