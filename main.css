@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+:root {
+    --tile-size: 100px;
+    --gap-size: 16px;
+}
+
 .tiles {
     margin: auto;
     margin-top: 20vh;
@@ -23,3 +28,9 @@ body {
    
 }
 
+@media screen and (max-width: 768px) {
+    :root {
+        --tile-size: 75px; /* Reduced size for mobile */
+        --gap-size: 12px; /* Reduced gap for mobile */
+    }
+}
