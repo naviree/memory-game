@@ -30,6 +30,18 @@ body {
 
 }
 
+.score {
+    height: 100px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 24px;
+    color: #F68B1D;
+}
+
+
 #resetButton {
     width: 100px;
     padding: 10px;
