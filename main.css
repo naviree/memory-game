@@ -68,7 +68,7 @@ body {
         #732982 100%,
         #E7484F 100%
 );
-    animation:slidebg 3s linear infinite;
+    animation:slidebg 10s linear infinite;
 }
 
 @keyframes slidebg {
