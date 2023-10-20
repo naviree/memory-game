@@ -25,8 +25,8 @@ let incorrectMatches = 0;
 
 const difficultyLevels = {
   easy: 20,
-  medium: 10,
-  hard: 5,
+  medium: 12,
+  hard: 7,
 };
 
 let currentDifficulty = "medium";

@@ -10,15 +10,20 @@
 
 <body>
     <div class="container">
-        <button id="resetButton">Reset Game</button>
+
         <p id="score-text">Score:</p>
         <p id="total-score">0</p>
     </div>
-    <select id="difficultySelector">
-        <option value="easy">Easy 20 Tries</option>
-        <option value="medium" selected>Medium 10 Tries</option>
-        <option value="hard">Hard 5 Tries</option>
-    </select>
+    <div class="wrapper">
+        <button id="resetButton">Reset Game</button>
+        <select id="difficultySelector">
+            <option value="easy">Easy 20 Tries</option>
+            <option value="medium" selected>Medium 12 Tries</option>
+            <option value="hard">Hard 7 Tries</option>
+        </select>
+    </div>
+
+
     <div class="tiles"></div>
     <script src="js/main.js" defer></script>
     <script src="js/buildReset.js" defer></script>

@@ -31,6 +31,12 @@ body {
   font-size: 24px;
   color: #f68b1d;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #resetButton {
   width: 100px;
   padding: 10px;
