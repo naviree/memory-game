@@ -26,7 +26,7 @@ function tileClickHandler() {
     awaitingEndOfMove = false;
     revealedCount += 2;
     if (revealedCount === tileCount) {
-      // Game won logic here
+      alert("You win!!");
     }
   } else {
     incorrectMatches++;
