@@ -12,5 +12,4 @@ document
   .addEventListener("change", function (event) {
     currentDifficulty = event.target.value;
     maxAttempts = difficultyLevels[currentDifficulty];
-    // resetTiles();
   });
